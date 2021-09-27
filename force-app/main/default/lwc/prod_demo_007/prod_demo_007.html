@@ -1,0 +1,30 @@
+<template>
+    
+    <lightning-card title="products" icon-name="custom:custom14">
+        <div class="slds-m-around_medium" style="background-color:aquamarine;color:red">
+            <lightning-button variant="success" label="hide/show" onclick={callmymethod}></lightning-button><br/>
+             
+           <table>
+            <tr><th>product id</th>
+            <th>product Name</th>
+            <th>product price</th>
+            <th>Action</th>
+           </tr>
+           <template if:true={show}>
+           <tr for:each={prodarray} for:item="prod" key={prod.name} class="slds-m-around_large">
+               <td>{prod.Id}</td>
+               <td>{prod.product_name__c}</td>
+               <td>{prod.prod_price__c}</td>
+               <td><div class="slds-align_absolute-center"><lightning-button value={prod.Id} label="delete" onclick={deleteme} variant="destructive"></lightning-button></div></td>
+           </tr>
+        </template><br/>
+           </table>
+        
+        </div>
+        <div style="background-color:chartreuse;color:midnightblue">
+            <c-addproduct></c-addproduct>
+        </div>        
+      
+
+    </lightning-card>  
+</template>

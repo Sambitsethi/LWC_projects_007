@@ -1,0 +1,20 @@
+<template>
+    <lightning-card title="gretting" icon-name="custom:custom14">
+        <div class="slds-m-around_medium" style="background-color:aqua;color:red">
+           <table border=2>
+            <tr><th>product id</th>
+            <th>product Name</th>
+            <th>product price</th>
+           </tr>
+           <tr for:each={prodarray} for:item="prod" key={prod.prodid}>
+               <td>{prod.prodid}</td>
+               <td>{prod.prodname}</td>
+               <td>{prod.prodprice}</td>
+           </tr>
+
+           </table>
+        </div>
+
+    </lightning-card>
+    
+</template>

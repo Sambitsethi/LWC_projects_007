@@ -1,0 +1,29 @@
+<template>
+    <div style="background-color: aquamarine;">
+        <lightning-input label="Enter search data" value={sk} onchange={gotdata}>
+        </lightning-input><br/><br/>
+    </div>
+    <div style="background-color: chartreuse;color:red">
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Phone</th>
+                <th>AccountNumber</th>
+                <th>Rating</th>          
+
+                <th>Action</th>
+            </tr>
+            <tr for:each={accData} for:item="sk" key={sk.id}>
+                <td>{sk.Id}</td>
+                <td>{sk.Name}</td>
+                <td>{sk.Phone}</td>
+                <td>{sk.AccountNumber}</td>
+                <td>{sk.Rating}</td>
+                <td><lightning-button variant="Destructive" label="Delete" value={sk.Id}  onclick={deleterec}></lightning-button></td>                
+            </tr><br/>
+        </table>
+
+    </div>
+    
+</template>
