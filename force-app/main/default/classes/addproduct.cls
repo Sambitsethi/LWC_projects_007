@@ -8,3 +8,6 @@ public with sharing class addproduct {
    insert pro1;
    }
 }
+
+
+vshdvhjsv ds 
