@@ -7,6 +7,7 @@ public with sharing class addproduct {
     pro1.prod_price__c=price;
    insert pro1;
    }
+   Sambitt
 }
 
 
